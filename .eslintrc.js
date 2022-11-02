@@ -4,7 +4,7 @@ module.exports = {
 		es2021: true,
 		jest: true,
 	},
-	extends: ["standard-with-typescript", "plugin:import/typescript", "plugin:prettier/recommended"],
+	extends: ["standard-with-typescript", "airbnb-base", "plugin:import/typescript", "plugin:prettier/recommended"],
 	overrides: [],
 	parserOptions: {
 		ecmaVersion: "latest",
@@ -12,5 +12,15 @@ module.exports = {
 		project: "./tsconfig.json",
 	},
 	plugins: ["prettier"],
-	rules: {},
+	rules: {
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				ts: "never",
+			},
+		],
+		"no-console": "off",
+		"func-names": "off",
+	},
 };
