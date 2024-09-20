@@ -23,7 +23,7 @@ it("expect element add", function () {
 });
 
 it("expect No Text", function () {
-	const div2: any = createHTMLElementText();
+	const div2: HTMLElement = createHTMLElementText();
 
 	expect(div2?.innerHTML).toBe("No Text");
 });
